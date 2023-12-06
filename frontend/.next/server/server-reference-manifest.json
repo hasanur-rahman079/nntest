@@ -1,0 +1,30 @@
+{
+  "node": {
+    "b778eb4f89dd95580725acd8a2eef35b30bff571": {
+      "workers": {
+        "app/dashboard/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fexpressive%2Fprachub%2Fnextjs14_test%2Ffrontend%2Fapp%2Fdashboard%2Fpage.jsx%22%2C%5B%22%24%24ACTION_1%22%5D%5D%2C%5B%22%2Fhome%2Fexpressive%2Fprachub%2Fnextjs14_test%2Ffrontend%2Fapp%2Flib%2Faction.js%22%2C%5B%22authenticate%22%2C%22uploadFile%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/page": "rsc"
+      }
+    },
+    "af92eb8e1cf71a71e47c9598e1e3b628b0bd62f3": {
+      "workers": {
+        "app/dashboard/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fexpressive%2Fprachub%2Fnextjs14_test%2Ffrontend%2Fapp%2Fdashboard%2Fpage.jsx%22%2C%5B%22%24%24ACTION_1%22%5D%5D%2C%5B%22%2Fhome%2Fexpressive%2Fprachub%2Fnextjs14_test%2Ffrontend%2Fapp%2Flib%2Faction.js%22%2C%5B%22authenticate%22%2C%22uploadFile%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/page": "rsc"
+      }
+    },
+    "cbddb1bd5f8ffa55ccd1771daf4465172b9c2211": {
+      "workers": {
+        "app/dashboard/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fexpressive%2Fprachub%2Fnextjs14_test%2Ffrontend%2Fapp%2Fdashboard%2Fpage.jsx%22%2C%5B%22%24%24ACTION_1%22%5D%5D%2C%5B%22%2Fhome%2Fexpressive%2Fprachub%2Fnextjs14_test%2Ffrontend%2Fapp%2Flib%2Faction.js%22%2C%5B%22authenticate%22%2C%22uploadFile%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/page": "rsc"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "rqk5dQ3as//m4rz59UxhiIorkTjIORNX0WpLJa+HII4="
+}
