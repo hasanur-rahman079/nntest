@@ -27,20 +27,19 @@ export const authenticate = async (formData) => {
 };
 
 // upload file
-export const uploadFile = async (formData) => {
-  console.log("Client: formData", formData);
+export const uploadFile = async (previousState, formData) => {
   try {
-    const response = await axios.post(`${backendUrl}/upload`, formData, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const result = await axios.post(
+      "http://localhost:5001/api/upload",
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
 
-    if (response.status === 201) {
-      console.log("File uploaded successfully");
-    } else {
-      console.log("Client: Failed to upload file", response.status);
-    }
+    // console.log(result);
   } catch (error) {
     console.error("Error while uploading", error.message);
   }

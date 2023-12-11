@@ -1,4 +1,4 @@
-// File: /home/expressive/prachub/nextjs14_test/frontend/app/dashboard/page.jsx
+// File: /Users/macbook/dev/nntest/frontend/app/dashboard/page.jsx
 import * as entry from '../../../../app/dashboard/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

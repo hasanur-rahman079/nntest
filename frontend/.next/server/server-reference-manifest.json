@@ -1,24 +1,28 @@
 {
   "node": {
-    "b778eb4f89dd95580725acd8a2eef35b30bff571": {
+    "14e7f0a465607f0b8092de1a5a01ef6906d1520d": {
       "workers": {
-        "app/dashboard/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fexpressive%2Fprachub%2Fnextjs14_test%2Ffrontend%2Fapp%2Fdashboard%2Fpage.jsx%22%2C%5B%22%24%24ACTION_1%22%5D%5D%2C%5B%22%2Fhome%2Fexpressive%2Fprachub%2Fnextjs14_test%2Ffrontend%2Fapp%2Flib%2Faction.js%22%2C%5B%22authenticate%22%2C%22uploadFile%22%5D%5D%5D&__client_imported__=!"
+        "app/login/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacbook%2Fdev%2Fnntest%2Ffrontend%2Fapp%2Flib%2Faction.js%22%2C%5B%22uploadFile%22%2C%22authenticate%22%5D%5D%5D&__client_imported__=true!",
+        "app/dashboard/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacbook%2Fdev%2Fnntest%2Ffrontend%2Fapp%2Flib%2Faction.js%22%2C%5B%22uploadFile%22%2C%22authenticate%22%5D%5D%5D&__client_imported__=true!"
       },
       "layer": {
-        "app/dashboard/page": "rsc"
+        "app/login/page": "action-browser",
+        "app/dashboard/page": "action-browser"
       }
     },
-    "af92eb8e1cf71a71e47c9598e1e3b628b0bd62f3": {
+    "06edabfc7dc85546825bc5eb0ba610289feb7c0b": {
       "workers": {
-        "app/dashboard/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fexpressive%2Fprachub%2Fnextjs14_test%2Ffrontend%2Fapp%2Fdashboard%2Fpage.jsx%22%2C%5B%22%24%24ACTION_1%22%5D%5D%2C%5B%22%2Fhome%2Fexpressive%2Fprachub%2Fnextjs14_test%2Ffrontend%2Fapp%2Flib%2Faction.js%22%2C%5B%22authenticate%22%2C%22uploadFile%22%5D%5D%5D&__client_imported__=!"
+        "app/login/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacbook%2Fdev%2Fnntest%2Ffrontend%2Fapp%2Flib%2Faction.js%22%2C%5B%22uploadFile%22%2C%22authenticate%22%5D%5D%5D&__client_imported__=true!",
+        "app/dashboard/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacbook%2Fdev%2Fnntest%2Ffrontend%2Fapp%2Flib%2Faction.js%22%2C%5B%22uploadFile%22%2C%22authenticate%22%5D%5D%5D&__client_imported__=true!"
       },
       "layer": {
-        "app/dashboard/page": "rsc"
+        "app/login/page": "action-browser",
+        "app/dashboard/page": "action-browser"
       }
     },
-    "cbddb1bd5f8ffa55ccd1771daf4465172b9c2211": {
+    "0d5d541f5d7097823e3ad86e2fda96f6d744efd8": {
       "workers": {
-        "app/dashboard/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fexpressive%2Fprachub%2Fnextjs14_test%2Ffrontend%2Fapp%2Fdashboard%2Fpage.jsx%22%2C%5B%22%24%24ACTION_1%22%5D%5D%2C%5B%22%2Fhome%2Fexpressive%2Fprachub%2Fnextjs14_test%2Ffrontend%2Fapp%2Flib%2Faction.js%22%2C%5B%22authenticate%22%2C%22uploadFile%22%5D%5D%5D&__client_imported__=!"
+        "app/dashboard/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacbook%2Fdev%2Fnntest%2Ffrontend%2Fapp%2Fdashboard%2Fpage.jsx%22%2C%5B%22%24%24ACTION_1%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
         "app/dashboard/page": "rsc"
@@ -26,5 +30,5 @@
     }
   },
   "edge": {},
-  "encryptionKey": "rqk5dQ3as//m4rz59UxhiIorkTjIORNX0WpLJa+HII4="
+  "encryptionKey": "uapZIUvtZVVPIgj92+ikaD2f8dD0XA4TKRUKk9Y9tNA="
 }

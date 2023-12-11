@@ -1,6 +1,6 @@
 import { signOut } from "@/auth";
 import styles from "../ui/dashboard/dashboard.module.css";
-import { uploadFile } from "../lib/action";
+import UploadForm from "../ui/dashboard/uploadForm.jsx";
 
 const dashboardPage = () => {
   return (
@@ -22,17 +22,7 @@ const dashboardPage = () => {
         <div className={styles.container}>
           <h4>Upload your image</h4>
 
-          <form action={uploadFile} className={styles.form}>
-            <input
-              className={styles.textInput}
-              type="text"
-              name="title"
-              id=""
-              placeholder="Title"
-            />
-            <input type="file" name="file" />
-            <button type="submit">Upload</button>
-          </form>
+          <UploadForm />
         </div>
       </div>
     </div>
