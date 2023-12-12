@@ -3,6 +3,7 @@
 import { signIn } from "@/auth";
 import axios from "axios";
 import { AuthError } from "next-auth";
+import { maxLength, minLength, object, parse, string } from "valibot";
 
 const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 
@@ -26,22 +27,46 @@ export const authenticate = async (formData) => {
   }
 };
 
-// upload file
-export const uploadFile = async (formData) => {
-  console.log("Client: formData", formData);
-  try {
-    const response = await axios.post(`${backendUrl}/upload`, formData, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+const Schema = object({
+  title: string("title must be a string", [
+    [
+      minLength(1, "Please enter your email."),
+      maxLength(50, "Title must be less than 50 characters."),
+    ],
+  ]),
+});
 
-    if (response.status === 201) {
-      console.log("File uploaded successfully");
-    } else {
-      console.log("Client: Failed to upload file", response.status);
-    }
+// upload file
+export const uploadFile = async (prevState, formData) => {
+  try {
+    // const { file, title } = Object.fromEntries(formData);
+
+    // const title = parse(Schema, { ...formData }, { abortEarly: true });
+
+    // formData.append("title", title);
+    // formData.append("file", file);
+
+    // const result = await axios.post(`${backendUrl}/api/image`, formData, {
+    //   headers: {
+    //     "Content-Type": "multipart/form-data",
+    //   },
+    // });
+
+    console.log(formData);
   } catch (error) {
-    console.error("Error while uploading", error.message);
+    console.log(error.message);
+    return error.message;
   }
 };
+
+export const uploadFileWithReactForm = async (formData) => {
+  try {
+    const data = Object.fromEntries(formData.entries());
+
+    console.log(data);
+  } catch (error) {
+    console.log(error.message);
+    return error.message;
+  }
+};
+ 
