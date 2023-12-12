@@ -1,45 +1,39 @@
+require("dotenv").config();
 const aws = require("aws-sdk");
 const multer = require("multer");
 const multerS3 = require("multer-s3");
 const FileModel = require("../db/model/upload.model");
 
-
 // configure AWS
-const s3 = new aws.S3({
-  secretAccessKey: process.env.S3_ACCESS_KEY,
-  accessKeyId: process.env.S3_SECRET_ACCESS_KEY,
-  region: process.env.S3_REGION,
-});
-
-// configure multer
-multer({
-  storage: multerS3({
-    s3: s3,
-    bucket: process.env.S3_BUCKET_NAME,
-    acl: "public-read",
-    metadata: function (req, file, cb) {
-      cb(null, { fieldName: file.fieldname });
-    },
-    key: function (req, file, cb) {
-      cb(null, Date.now().toString());
-    },
-  }),
+const s3 = new S3Client({
+  credentials: {
+    accessKeyId: accessKey,
+    secretAccessKey: secretAccessKey,
+  },
+  region: bucketRegion,
 });
 
 // Create a new file collection
 const uploadFile = async (req, res) => {
-  // Log that the server received a request
-  console.log("Server received a file upload request");
+  console.log(req.body);
+  console.log(req.file);
 
-  // use the multer middleware-s3 to handle upload the file
-  const uploadFile = upload.single("image");
+  req.file.buffer;
 
-  // and get the file url from the req.file.location
-  const file = req.file;
-  console.log(file.location);
+  const params = {
+    Bucket: bucketName,
+    Key: req.file.originalname,
+    Body: req.file.buffer,
+    ContentType: req.file.mimetype,
+  };
+
+  const command = new PutObjectCommand(params);
 
   try {
-    res.status(201).json({ data: req.file.location });
+    // tell s3 to send the command to s3 bucket
+    await s3.send(command);
+
+    res.send({});
   } catch (error) {
     console.error(error);
     res.status(500).json(error);

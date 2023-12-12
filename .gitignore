@@ -1,38 +1,82 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-*node_modules
-/.pnp
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+*.pnp
 .pnp.js
-.yarn/install-state.gz
 
+<<<<<<< HEAD
 # testing
 /coverage
 
 # next.js
 *.next/
+=======
+# Next.js
+/.next/
+>>>>>>> e8afddd34861475a61b89d0d478612cbe297c781
 /out/
+/frontend/.next/*
 
-# production
-/build
+# Build files
+/build/
+/dist/
+/.nuxt/
+/public/
 
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 .env*.local
 
-*.env
+# Editor files
+.vscode/
+.idea/
 
-# vercel
-.vercel
+# OS generated files
+.DS_Store
+Thumbs.db
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Logs
+logs
+*.log
+
+# Test coverage
+/coverage
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+.jest
+.pnp
+.pnp.js
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files
+.env
+
+# Next.js Image metadata
+images.json
+
+# Serverless directories
+.serverless/

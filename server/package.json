@@ -9,7 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "aws-sdk": "^2.1515.0",
+=======
+    "@aws-sdk/client-s3": "^3.470.0",
+    "aws-sdk": "^2.1512.0",
+>>>>>>> e8afddd34861475a61b89d0d478612cbe297c781
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",

@@ -37,33 +37,20 @@ const Schema = object({
 });
 
 // upload file
-export const uploadFile = async (prevState, formData) => {
+export const uploadFile = async (formData) => {
+  console.log("Client: formData", formData);
   try {
-    // const { file, title } = Object.fromEntries(formData);
+    const response = await axios.post(`${backendUrl}/upload`, formData, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-    // const title = parse(Schema, { ...formData }, { abortEarly: true });
-
-    // formData.append("title", title);
-    // formData.append("file", file);
-
-    // const result = await axios.post(`${backendUrl}/api/image`, formData, {
-    //   headers: {
-    //     "Content-Type": "multipart/form-data",
-    //   },
-    // });
-
-    console.log(formData);
-  } catch (error) {
-    console.log(error.message);
-    return error.message;
-  }
-};
-
-export const uploadFileWithReactForm = async (formData) => {
-  try {
-    const data = Object.fromEntries(formData.entries());
-
-    console.log(data);
+    if (response.status === 201) {
+      console.log("File uploaded successfully");
+    } else {
+      console.log("Client: Failed to upload file", response.status);
+    }
   } catch (error) {
     console.log(error.message);
     return error.message;

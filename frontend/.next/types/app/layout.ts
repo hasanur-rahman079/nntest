@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // File: /home/expressive/prachub/nn_test/frontend/app/layout.js
+=======
+// File: /Users/macbook/dev/nntest/frontend/app/layout.js
+>>>>>>> e8afddd34861475a61b89d0d478612cbe297c781
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -4,15 +4,21 @@ const mongoose = require("mongoose");
 
 dotenv.config();
 
+const url = process.env.MONGO_URI;
+
+const connectionParams = {
+  autoIndex: true,
+};
+
 const connect = async () => {
   try {
     mongoose.set("strictQuery", false);
-    await mongoose.connect(process.env.MONGO_URI, {
-      autoIndex: true,
-    });
+    await mongoose.connect(url, connectionParams);
     console.log("MongoDB connected");
   } catch (error) {
-    console.log(error);
+    console.log("MongoDB connection failed");
+    console.log(error.message);
+    throw new Error(error);
   }
 };
 
